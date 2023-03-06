@@ -1,0 +1,49 @@
+$color-header : #d385c9;
+$color-nav: rgb(248, 248, 247);
+@use 'mixinfunc';
+
+
+.wave2{
+    display: flex;
+}
+   
+.wave{
+      display: flex;
+      @include mixinfunc.fixed;
+      margin-top: 60px;
+      
+}
+
+div[id]{
+    scroll-margin-top: 200px;
+}
+.nav {
+    background-color: $color-header;
+    color: $color-nav;
+    font-size: 20px;
+    @include mixinfunc.fixed;
+
+    &__container {
+        @include mixinfunc.flex(space-evenly);
+        gap: 20px;
+        padding: 20px;
+       
+
+     &__item {
+            cursor: pointer;
+            text-decoration: none;
+            color: $color-nav;
+
+         &:hover {
+                color: blueviolet;
+            }
+        }
+     }
+
+    @media (min-width:750px) {
+        &__container {
+            justify-content: flex-end;
+        }
+    }
+}
+

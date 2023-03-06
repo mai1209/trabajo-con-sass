@@ -1,0 +1,45 @@
+@use 'header';
+@use 'mixinfunc';
+$color-parrafos: rgb(2, 27, 44);
+
+
+.principal {
+    @include mixinfunc.flex(center);
+    margin-top: 150px;
+
+    &__title {
+        color: header.$color-header;
+        font-size: 3rem;
+        padding: 20px;
+
+        &:hover {
+            font-size: 3.5rem;
+        }
+
+        @media (max-width:600px) {
+            font-size: 2rem;
+            text-align: center;
+            &:hover {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    &__happy {
+        width: 150px;
+        height: 150px;
+
+        @media (max-width:600px) {
+            width: 100px;
+            height: 100px;
+         }
+}
+
+}
+.intro {
+    color: $color-parrafos;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    font-size: 1rem;
+}

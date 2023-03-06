@@ -1,0 +1,83 @@
+@use 'principal';
+@use 'mixinfunc';
+@use 'header';
+
+
+
+.hero {
+  color: principal.$color-parrafos;
+  @include mixinfunc.flex(center);
+  background-image: url('../img/cielo-despejado-mar-azul.jpg');
+  @include mixinfunc.background;
+
+  &__text {
+    width: 80%;
+    max-width: 980px;
+    height: 300px;
+    @include mixinfunc.flex(center);
+    padding: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+
+  }
+}
+
+.title2 {
+
+  text-align: center;
+  color: header.$color-header;
+  margin: 30px
+}
+
+.container {
+  @include mixinfunc.flex(center);
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 10px;
+  z-index: -1;
+  
+  &__1{
+    @include mixinfunc.flex(center);
+  }
+
+
+  &__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    position: relative;
+
+  }
+
+  &__info{
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    background-color: header.$color-header;
+    @include mixinfunc.flex(center);
+    text-align: center;
+    padding: 8px;
+    color: header.$color-nav;
+    position: absolute;
+    opacity: 0;
+
+    &:hover{
+      opacity: 1;
+      transition: 1s;
+      cursor: pointer;
+    }
+    
+  }
+
+
+
+
+}

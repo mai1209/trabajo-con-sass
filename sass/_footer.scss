@@ -1,0 +1,47 @@
+@use 'header';
+@use 'mixinfunc';
+
+
+.wave2 {
+   display: flex;
+
+}
+
+.wave {
+   display: flex;
+   @include mixinfunc.fixed;
+   margin-top: 64px;
+
+}
+
+
+.footer {
+   background-color: header.$color-header;
+   @include mixinfunc.flex(space-between);
+   padding: 20px;
+   
+
+
+   &__nav a {
+      color: header.$color-nav;
+      text-decoration: none;
+      padding: 10px;
+
+      &:hover {
+         color: blueviolet;
+      }
+
+   }
+
+   &__info ul li {
+      color: header.$color-nav;
+      list-style: none;
+   }
+
+
+   @media (max-width:412px) {
+      font-size: 12px;
+      
+   }
+  
+}

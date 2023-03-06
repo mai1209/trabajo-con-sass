@@ -1,0 +1,24 @@
+@use 'header';
+@use 'principal';
+@use 'sobremi';
+@use 'footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    
+}
+
+

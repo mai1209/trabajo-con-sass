@@ -1,0 +1,24 @@
+@mixin background{
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+        attachment: fixed;
+
+
+    }
+ 
+}
+
+@mixin flex($justify){
+    display: flex;
+    justify-content:$justify;
+    align-items: center;
+}
+
+@mixin fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
