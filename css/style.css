@@ -140,6 +140,21 @@ div[id] {
   border-radius: 50px;
   position: relative;
 }
+.container__click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  color: rgb(53, 2, 63);
+  position: absolute;
+  opacity: 0;
+}
+@media (max-width: 640px) {
+  .container__click {
+    opacity: 1;
+  }
+}
 .container__info {
   width: 250px;
   height: 250px;
